@@ -1,0 +1,32 @@
+{
+  "name": "nodejs_ep_2022",
+  "version": "1.0.0",
+  "description": "Nodejs studying project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "task1": "nodemon --exec babel-node src/hw-1/task1.js",
+    "task2": "nodemon --exec babel-node src/hw-1/task2.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SobollEva/nodejs_ep_2022.git"
+  },
+  "author": "Sobelevaskaya Evgeniya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SobollEva/nodejs_ep_2022/issues"
+  },
+  "homepage": "https://github.com/SobollEva/nodejs_ep_2022#readme",
+  "devDependencies": {
+    "@babel/core": "^7.20.7",
+    "@babel/node": "^7.20.7",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.0",
+    "eslint": "^8.30.0",
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "csvtojson": "^2.0.10"
+  }
+}
