@@ -1,7 +1,10 @@
-export function UserModel(sequelize: any, DataTypes: any) {
+import { DataTypes } from 'sequelize';
+
+export default (sequelize: any) => {
     return sequelize.define('user', {
         id: {
-            type: DataTypes.TEXT,
+            type: DataTypes.UUID,
+            defaultValue: DataTypes.UUIDV4,
             primaryKey: true,
             allowNull: false
         },
@@ -18,10 +21,11 @@ export function UserModel(sequelize: any, DataTypes: any) {
             allowNull: false
         },
         isDeleted: {
-            type: DataTypes.BOOLEAN
+            type: DataTypes.BOOLEAN,
+            defaultValue: false
         }
     }, {
         timestamps: false,
-        tableName: 'users'
+        tableName: 'user'
     });
-};
+}
