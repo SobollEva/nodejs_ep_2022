@@ -10,7 +10,8 @@
     "task2-1": "nodemon --exec babel-node src/hw-1/task2.js",
     "task2": "tsc src/hw-2/index.ts --outDir dist && nodemon --exec babel-node dist/index.js",
     "task3": "npm run clean:dist && tsc src/hw-3/index.ts --outDir dist && nodemon --exec babel-node dist/index.js",
-    "task4": "npm run clean:dist && tsc src/hw-4/index.ts --outDir dist && nodemon --exec babel-node dist/index.js"
+    "task4": "npm run clean:dist && tsc src/hw-4_5/index.ts --outDir dist && nodemon --exec babel-node dist/index.js",
+    "task5": "npm run clean:dist && tsc src/hw-4_5/index.ts --outDir dist && nodemon --exec babel-node dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -46,6 +47,7 @@
     "express-joi-validation": "^5.0.1",
     "pg": "^8.9.0",
     "sequelize": "^6.28.0",
-    "uuid": "^9.0.0"
+    "uuid": "^9.0.0",
+    "winston": "^3.8.2"
   }
 }
