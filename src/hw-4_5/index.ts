@@ -1,8 +1,10 @@
 import userRouter from './routers/user.router';
 import groupRouter from './routers/group.router';
 import userGroupRouter from './routers/userGroup.router';
+import loginRouter from './routers/login.router';
 import * as express from 'express';
-import { errorHandler, logHttpData } from './routers/middleware';
+import * as cors from 'cors';
+import { errorHandler, logHttpData, verifyToken } from './routers/middleware';
 import { logger } from './utils/winston.utils';
 
 const app: express.Express  = express();
@@ -10,6 +12,12 @@ const PORT = 3000;
 
 app.use(express.json());
 app.use(logHttpData);
+
+app.options('*', cors());
+
+app.use('/login', loginRouter);
+
+app.use(verifyToken);
 
 app.use('/user', userRouter);
 app.use('/group', groupRouter);
